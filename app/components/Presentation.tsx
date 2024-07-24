@@ -18,7 +18,7 @@ export const Presentation = () => {
                         <p className='text-secundary text-xl font-medium max-w-5xl text-center mt-4 max-[500px]:text-lg'>
                         Sou um desenvolvedor full-stack 🐱‍💻
                         </p>
-                        <p className="text-secundary text-xl font-medium max-w-5xl text-center mt-4 max-[500px]:text-lg flex justify-center items-center gap-2"> <FaMapMarkerAlt color="#9CA9BD"/> Campo Grande - MS | <PiSuitcaseSimple  color="#9CA9BD"/> #Open to Work</p>    
+                        <p className="text-secundary text-xl font-medium max-w-5xl text-center mt-4 max-[500px]:text-lg flex justify-center items-center gap-2"> <FaMapMarkerAlt color="#9CA9BD"/> Campo Grande - MS  <span className="flex items-center gap-2 max-[420px]:hidden">| <PiSuitcaseSimple  color="#9CA9BD"/> #Open to Work</span></p>    
                     
                     </div>
                 </section>

@@ -36,7 +36,7 @@ export const Education = ({ beginDate, endDate, course, entity, skills }: Educat
                     <p className="text-lg font-bold color_main">
                         {entity}
                     </p>
-                    <p className="text-lg font-bold color_main">
+                    <p className="text-lg font-bold color_main max-sm:mb-12">
                         {skills}
                     </p>
                 </div>

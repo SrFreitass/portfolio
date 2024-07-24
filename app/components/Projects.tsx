@@ -19,6 +19,8 @@ export const Projects = () => {
                 direction='LEFT' 
                 title="<TechConnect />" 
                 description="Projeto techconnect consiste em um portal de notícias de tecnologia similar a um blog. o projeto é full-stack, vai desde o front-end ao back-end com firebase." 
+                url='https://techconnectdev.vercel.app'
+                git="https://github.com/srfreitass/techconnect"
                 />
 
                 <Project 
@@ -30,6 +32,8 @@ export const Projects = () => {
                 {name: "PrismaJS", icon: <SiPrisma/>}]} 
                 direction='RIGHT' 
                 title="<EstudaAI />" 
+                url=''
+                git="https://github.com/SrFreitass/estudai/tree/dev"
                 description="Em desenvolvimento - Uma plataforma de educação para estudar para o ENEM e vestibulares, com simulados, correção de redação por IA e videoaulas." />
             </div>
         </section>
