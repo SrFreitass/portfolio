@@ -12,9 +12,9 @@ export const Carrer = () => {
             </div>
             <HardSkills/>
             <div className="flex gap-4 items-center mt-10">
-                <button className='bg-primary w-40 h-12 rounded-md font-semibold text-white'><a href=''>Download C.V</a></button>
+                <button className='bg-primary w-40 h-12 rounded-md font-semibold text-white'><a href='https://drive.google.com/file/d/1ikCMpcOzMZKpeS3rOqfySs2eZxSSR0fs/' target="__blank">Download C.V</a></button>
                 <button className="bg-[#141D30] w-12 h-12 rounded-md font-semibold text-secundary flex justify-center items-center gap-2">
-                    <FaLinkedin/>
+                   <a href="https://www.linkedin.com/in/guilherme-freitas-do-nascimento-53b804266/" target="__blank"><FaLinkedin/></a> 
                 </button>
             </div>
         </div>
