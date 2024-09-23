@@ -1,5 +1,5 @@
-import estudai from '@/public/images/estudai.png'
-import techconnect from '@/public/images/techconnect.png'
+import estudai from '@/src/public/images/estudai.png'
+import techconnect from '@/src/public/images/techconnect.png'
 import { DiReact } from 'react-icons/di'
 import { FaNodeJs } from 'react-icons/fa'
 import { RiFirebaseLine, RiNextjsLine } from 'react-icons/ri'

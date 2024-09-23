@@ -1,4 +1,4 @@
-import githubIcon from '@/public/images/github_icon.svg';
+import githubIcon from '@/src/public/images/github_icon.svg';
 import { StaticImport } from 'next/dist/shared/lib/get-img-props';
 import Image from 'next/image';
 

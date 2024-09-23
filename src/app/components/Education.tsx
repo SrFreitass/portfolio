@@ -1,4 +1,4 @@
-import book from '@/public/images/book.svg';
+import book from '@/src/public/images/book.svg';
 import Image from 'next/image';
 
 

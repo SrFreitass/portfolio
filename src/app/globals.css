@@ -16,9 +16,6 @@
   }
 } */
 
-.color_main {
-   @apply bg-gradient-to-r bg-clip-text text-transparent from-secundary via-white to-white
-}
 
 html {
   scroll-behavior: smooth;
@@ -30,21 +27,16 @@ html {
 }
 
 body {
+  min-height: 100vh;
   /* color: rgb(var(--foreground-rgb)); */
   background-image: url("../public/images/bg.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
 }
-
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}
-
 @media (max-width: 1024px) {
   html {
     font-size: 90%;
   }
 }
+

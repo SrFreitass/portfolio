@@ -1,4 +1,4 @@
-import photo_guilherme from '@/public/images/guilherme.jpg'
+import photo_guilherme from '@/src/public/images/guilherme.jpg'
 import Image from 'next/image'
 import { Carrer } from './Career'
 
