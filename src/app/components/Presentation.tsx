@@ -3,7 +3,7 @@ import Image from "next/image"
 
 export const Presentation = () => {
     return (
-            <div className='mx-40 py-5 w-3/4'>
+            <div className='mx-40 w-3/4'>
                 <h1 className="text-3xl text-primary font-bold border-b pb-4 border-[#27272A]">Seja bem-vindo ao meu portfolio 👋</h1>
                 <div className="flex mt-10 gap-10">
                     <Image className="min-w-[25rem] border rounded-xl" src={"https://images.pexels.com/photos/208984/pexels-photo-208984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"} alt="Foto" width={200} height={500}/>
