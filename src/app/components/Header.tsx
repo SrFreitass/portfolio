@@ -8,7 +8,7 @@ import { TbSparkles } from "react-icons/tb"
 
 export const Header = () => {
     return ( 
-        <aside className="w-80">
+        <aside className="w-80 sticky top-1">
             <div className="flex items-center gap-4">
                 <Image src={"https://github.com/srfreitass.png"} width={50} height={50} className="rounded-full" alt="Foto de perfil"/>
                 <div>
@@ -20,7 +20,7 @@ export const Header = () => {
             <ul className="text-secundary flex flex-col gap-6 mt-8 font-semibold">
                 <li className=""><Link href={"/"} className="flex items-center gap-2"><TbSparkles size={24}/> Início</Link></li>
                 <li className=""><Link href={"/career"} className="flex items-center gap-2"><PiGraph   size={24}/> Carreira</Link></li>
-                <li className="flex items-center gap-2"><FaStackOverflow  size={24}/> Habilidades</li>
+                <li className="flex items-center gap-2"><Link href={"/skills"} className="flex items-center gap-2"><FaStackOverflow  size={24}/> Habilidades</Link></li>
                 <li className="flex items-center gap-2"><AiOutlineProject  size={24}/> Projetos</li>
                 <li className="flex items-center gap-2"><IoMdContact  size={24}/> Contato</li>
             </ul>
