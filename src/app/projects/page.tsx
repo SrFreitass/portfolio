@@ -12,9 +12,11 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex  items-center m-auto min-h-screen flex-col max-w-[1450px]">
+      <main className="flex m-auto min-h-screen p-8">
         <Header/>
-        <h2 className='text-[2.5rem] font-bold color_main'>Projetos</h2>
+        <div className='mx-40'>
+          <h2 className="text-3xl text-primary font-bold border-b pb-4 border-[#27272A]">Projetos</h2>
+        </div>
       </main>
     </>
   );

@@ -21,7 +21,7 @@ export const Header = () => {
                 <li className=""><Link href={"/"} className="flex items-center gap-2"><TbSparkles size={24}/> Início</Link></li>
                 <li className=""><Link href={"/career"} className="flex items-center gap-2"><PiGraph   size={24}/> Carreira</Link></li>
                 <li className="flex items-center gap-2"><Link href={"/skills"} className="flex items-center gap-2"><FaStackOverflow  size={24}/> Habilidades</Link></li>
-                <li className="flex items-center gap-2"><AiOutlineProject  size={24}/> Projetos</li>
+                <li className="flex items-center gap-2"><Link href={"/projects"} className="flex items-center gap-2"><AiOutlineProject  size={24}/> Projetos</Link></li>
                 <li className="flex items-center gap-2"><IoMdContact  size={24}/> Contato</li>
             </ul>
         </aside>
