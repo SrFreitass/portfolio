@@ -24,6 +24,7 @@
     "tailwindcss-animate": "^1.0.7"
   },
   "devDependencies": {
+    "@freitasdev/eslint-config": "^2.1.0",
     "@types/aos": "^3.0.7",
     "@types/node": "^20",
     "@types/react": "^18",
