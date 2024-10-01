@@ -13,7 +13,7 @@ export default function Home() {
 
   return (
     <>
-      <main className="flex m-auto min-h-screen p-8">
+      <main className="flex m-auto">
         <Header/>
         <Presentation />
         {/* <Presentation/>
