@@ -20,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${plusJakartaSans.className} min-h-screen p-8 mt-6`}>
+      <body className={`${plusJakartaSans.className} min-h-screen !p-8 !mt-6`}>
         {children}
       </body>
     </html>

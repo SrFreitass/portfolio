@@ -3,13 +3,13 @@ import { Project } from './Project';
 
 export const Presentation = () => {
   return (
-    <div className="mx-20 w-3/4">
+    <div className="ml-20 max-xl:ml-0 w-3/4 max-xl:w-full">
       <h1 className="text-3xl text-primary font-bold border-b pb-4 border-[#27272A]">
         Seja bem-vindo ao meu portfolio 👋
       </h1>
       <div className="flex mt-10 gap-10">
         <Image
-          className="min-w-[25rem] max-h-[40rem] border rounded-xl"
+          className="min-w-[25rem] max-h-[40rem] border rounded-xl max-2xl:hidden"
           src={
             'https://images.pexels.com/photos/208984/pexels-photo-208984.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
           }

@@ -34,9 +34,4 @@ body {
   background-position: center;
   background-size: cover;
 }
-@media (max-width: 1024px) {
-  html {
-    font-size: 90%;
-  }
-}
 

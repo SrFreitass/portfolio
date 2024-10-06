@@ -13,6 +13,7 @@ import { PiGraph } from 'react-icons/pi';
 import { RiShareBoxFill } from 'react-icons/ri';
 import { SiReaddotcv } from 'react-icons/si';
 import { TbSparkles } from 'react-icons/tb';
+import { Avatar } from './Avatar';
 
 const ItemNav = ({
   icon,
@@ -35,21 +36,8 @@ const ItemNav = ({
 
 export const Header = () => {
   return (
-    <aside className="sticky top-1 w-[20rem]">
-      <div className="flex items-center gap-4">
-        <Image
-          src={'https://github.com/srfreitass.png'}
-          width={50}
-          height={50}
-          className="rounded-full"
-          alt="Foto de perfil"
-        />
-        <div>
-          <h2 className="text-primary font-bold">Guilherme Freitas</h2>
-          <p className="text-secundary font-medium">Desenvolvedor Full-Stack</p>
-        </div>
-      </div>
-
+    <aside className="sticky top-1 w-[20rem] max-xl:hidden">
+      <Avatar />
       <ul className="text-secundary flex flex-col gap-6 mt-8 font-semibold">
         <li className="">
           <Link href={'/'} className="flex items-center gap-2">
