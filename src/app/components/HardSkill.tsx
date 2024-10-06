@@ -1,14 +1,22 @@
-import { ReactNode } from 'react';
+import { RiShareBoxFill } from 'react-icons/ri';
 
 interface HardSkillProps {
-  icon: ReactNode;
-  name: string;
+  url: string;
+  stack: string;
+  description: string;
 }
 
-export const HardSkill = ({ icon, name }: HardSkillProps) => {
+export const HardSkill = ({ stack, description, url }: HardSkillProps) => {
   return (
-    <div className="flex items-center justify-center text-secundary font-semibold gap-2 bg-[#141D30] w-36 h-10 rounded-lg">
-      {icon} {name}
-    </div>
+    <li>
+      <a
+        target="__blank"
+        href={url}
+        className="text-blue-500 gap-1 items-center inline-flex "
+      >
+        {stack} <RiShareBoxFill />{' '}
+      </a>
+      <span className="text-primary">- {description}</span>
+    </li>
   );
 };

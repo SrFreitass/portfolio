@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR">
       <body className={`${plusJakartaSans.className} min-h-screen p-8 mt-6`}>
         {children}
       </body>
