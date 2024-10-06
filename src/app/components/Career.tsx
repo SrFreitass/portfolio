@@ -2,7 +2,7 @@ import { Education } from './Education';
 
 export const Career = () => {
   return (
-    <div className="mx-20 w-1/3">
+    <div className="w-full">
       <h2 className="text-3xl text-primary font-bold border-b pb-4 border-[#27272A]">
         Experiências e formações
       </h2>

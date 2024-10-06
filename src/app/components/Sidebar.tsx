@@ -34,9 +34,9 @@ const ItemNav = ({
   );
 };
 
-export const Header = () => {
+export const Sidebar = () => {
   return (
-    <aside className="sticky top-1 w-[20rem] max-xl:hidden">
+    <aside className="min-w-[17rem] max-xl:hidden">
       <Avatar />
       <ul className="text-secundary flex flex-col gap-6 mt-8 font-semibold">
         <li className="">

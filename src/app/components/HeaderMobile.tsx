@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { Avatar } from './Avatar';
 import { Menu } from './Menu';
 
 export function HeaderMobile() {

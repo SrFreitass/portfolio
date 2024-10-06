@@ -3,7 +3,7 @@ import { Project } from './Project';
 
 export const Presentation = () => {
   return (
-    <div className="ml-20 max-xl:ml-0 w-3/4 max-xl:w-full">
+    <div>
       <h1 className="text-3xl text-primary font-bold border-b pb-4 border-[#27272A]">
         Seja bem-vindo ao meu portfolio 👋
       </h1>
