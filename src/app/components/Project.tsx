@@ -45,7 +45,10 @@ export const Project = ({
         </Link>
         <p className="text-secundary">{description}</p>
         <div className="flex gap-2 items-center mt-2">
-          <div className={`w-2 h-2 bg-${language.color} rounded-full`}></div>
+          <div
+            className={`w-2 h-2 rounded-full`}
+            style={{ background: language.color }}
+          ></div>
           <p className="text-secundary text-sm">{language.name}</p>
         </div>
         <div className="flex flex-wrap gap-4 mt-4">

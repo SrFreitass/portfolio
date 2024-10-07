@@ -32,7 +32,7 @@ export const Presentation = () => {
             <Project
               title="BookMark"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. onsectetur adipisicing elit ipsum dolor sit amet consectetur"
-              language={{ color: 'blue-500', name: 'Typescript' }}
+              language={{ color: 'rgb(59 130 246)', name: 'Typescript' }}
               stacks={['Bun', 'Elysia.js', 'Drizzle ORM', 'Postgresql']}
               url="https://github.com/srfreitass/bookmark"
               status="Público"
@@ -40,7 +40,7 @@ export const Presentation = () => {
             <Project
               title="OrionOS"
               description="Lorem ipsum dolor sit amet consectetur adipisicing elit. onsectetur adipisicing elit ipsum dolor sit amet consectetur"
-              language={{ color: 'green-600', name: 'Shell' }}
+              language={{ color: 'rgb(22 163 74)', name: 'Shell' }}
               stacks={['Shell', 'GNU/Linux']}
               url="https://github.com/srfreitass/orionos"
               status="Público"
@@ -52,7 +52,7 @@ export const Presentation = () => {
           <Project
             title="Teste e2e com Bun"
             description="Lorem ipsum dolor sit amet consectetur adipisicing elit. onsectetur adipisicing elit ipsum dolor sit amet consectetur"
-            language={{ color: 'blue-500', name: 'Typescript' }}
+            language={{ color: 'rgb(59 130 246)', name: 'Typescript' }}
             stacks={['Bun', 'Web API', 'E2E', 'Testes']}
             status="</techconnect/>"
             url="https://techconnectdev.vercel.app"
