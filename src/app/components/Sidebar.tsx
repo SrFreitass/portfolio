@@ -14,6 +14,7 @@ import { RiShareBoxFill } from 'react-icons/ri';
 import { SiReaddotcv } from 'react-icons/si';
 import { TbSparkles } from 'react-icons/tb';
 import { Avatar } from './Avatar';
+import { NavBar } from './Navbar';
 
 const ItemNav = ({
   icon,
@@ -38,38 +39,7 @@ export const Sidebar = () => {
   return (
     <aside className="min-w-[17rem] max-xl:hidden">
       <Avatar />
-      <ul className="text-secundary flex flex-col gap-6 mt-8 font-semibold">
-        <li className="">
-          <Link href={'/'} className="flex items-center gap-2">
-            <TbSparkles size={24} /> Início
-          </Link>
-        </li>
-        <li className="">
-          <Link href={'/career'} className="flex items-center gap-2">
-            <PiGraph size={24} /> Carreira
-          </Link>
-        </li>
-        <li className="flex items-center gap-2">
-          <Link href={'/skills'} className="flex items-center gap-2">
-            <FaStackOverflow size={24} /> Habilidades
-          </Link>
-        </li>
-        <li className="flex items-center gap-2">
-          <Link href={'/projects'} className="flex items-center gap-2">
-            <AiOutlineProject size={24} /> Projetos
-          </Link>
-        </li>
-        <hr className="border-[#27272A]" />
-
-        <ItemNav
-          href="#"
-          icon={<SiReaddotcv size={24} />}
-          title="Currículo CV"
-        />
-        <ItemNav href="#" icon={<FaLinkedin size={24} />} title="Linkedin" />
-        <ItemNav href="#" icon={<FaGithub size={24} />} title="Github" />
-        <ItemNav href="#" icon={<FaWhatsapp size={24} />} title="Whatsapp" />
-      </ul>
+      <NavBar />
     </aside>
   );
 };

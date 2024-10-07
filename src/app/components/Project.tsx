@@ -24,7 +24,7 @@ export const Project = ({
   image,
 }: ProjectProps) => {
   return (
-    <div className="border-[#27272a] border rounded-xl w-96">
+    <div className="border-[#27272a] border rounded-xl w-96 max-md:w-full">
       {image && (
         <Image
           src={image}
@@ -48,7 +48,7 @@ export const Project = ({
           <div className={`w-2 h-2 bg-${language.color} rounded-full`}></div>
           <p className="text-secundary text-sm">{language.name}</p>
         </div>
-        <div className="flex gap-4 mt-4">
+        <div className="flex flex-wrap gap-4 mt-4">
           {stacks.map((stack, index) => {
             return (
               <p

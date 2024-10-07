@@ -19,13 +19,12 @@ export const Presentation = () => {
         />
         <div>
           <h2 className="text-primary text-xl font-semibold">Sobre mim.</h2>
-          <p className="text-secundary">
-            Lorem ipsum 👋, dolor sit amet consectetur adipisicing elit. Sint
-            sapiente expedita itaque quia at fuga, iusto tempore omnis iste
-            cupiditate, aliquam maxime dolorum ipsum aperiam veritatis quasi
-            excepturi, delectus animi. lorem
+          <p className="text-secundary mt-2">
+            Olá, sou Guilherme Freitas do Nascimento 👋, tenho 16 anos. Comecei
+            a desenvolver no início de 2023. Sou um entusiasta da tecnologia e
+            um desenvolvedor full-stack, dedicado a construir soluções e
+            projetos de alto nível.
           </p>
-
           <h2 className="text-primary text-xl font-semibold mt-4">
             Ultimos Projetos
           </h2>
@@ -47,7 +46,6 @@ export const Presentation = () => {
               status="Público"
             />
           </div>
-
           <h2 className="text-primary text-xl font-semibold mt-4 mb-4">
             Ultimos posts
           </h2>

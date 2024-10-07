@@ -11,16 +11,16 @@ export const Career = () => {
         <Education
           beginDate="Mar 2023"
           endDate="Dez 2025"
-          course="Game Developer"
+          course="Ensino Médio Téc."
           entity="E.E Prof° Silvio Oliveira dos Santos"
-          skills={['Python', 'Lua']}
+          skills={[]}
         />
         <Education
           beginDate="Mar 2024"
           endDate="Nov 2025"
-          course="Systems Developer"
+          course="Desenvolvimento de sistemas"
           entity="Senac MS - Hub Academy"
-          skills={['PHP', 'MySQL', 'Python']}
+          skills={['PHP', 'MySQL', 'Python', 'HTML', 'CSS', 'Javascript']}
         />
       </div>
     </div>

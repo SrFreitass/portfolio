@@ -36,7 +36,7 @@ export const Education = ({
         <div className="flex flex-col gap-2">
           <h4 className="text-xl font-bold text-primary">{course}</h4>
           <p className="text-lg font-medium text-secundary ">{entity}</p>
-          <div className="flex gap-4">
+          <div className="flex flex-wrap gap-4">
             {skills.map((skill, index) => {
               return (
                 <p

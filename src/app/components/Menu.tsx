@@ -11,6 +11,7 @@ import { useState } from 'react';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { Avatar } from './Avatar';
 import Link from 'next/link';
+import { NavBar } from './Navbar';
 
 export function Menu() {
   const [status, setStatus] = useState(false);
@@ -22,22 +23,9 @@ export function Menu() {
           <HiOutlineMenuAlt3 size={28} color="#fafafa" />
         </DrawerTrigger>
         <DrawerContent>
-          <nav className="p-8 flex flex-col gap-8">
+          <nav className="p-8 flex flex-col">
             <Avatar />
-            <ul className="flex flex-col gap-4 text-primary text-xl font-medium">
-              <li>
-                <Link href={'./'}>Início</Link>
-              </li>
-              <li>
-                <Link href={'./career'}>Carreira</Link>
-              </li>
-              <li>
-                <Link href={'./skills'}>Habilidades</Link>
-              </li>
-              <li>
-                <Link href={'./projects'}>Projetos</Link>
-              </li>
-            </ul>
+            <NavBar />
           </nav>
         </DrawerContent>
       </Drawer>
