@@ -1,5 +1,5 @@
 import { FaNodeJs } from "react-icons/fa"
-import { SiFastify, SiFirebase, SiMysql, SiNextdotjs, SiPhp, SiPostgresql, SiPrisma, SiPython, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si"
+import { SiFastify, SiFirebase, SiGit, SiMysql, SiNextdotjs, SiPhp, SiPostgresql, SiPrisma, SiPython, SiReact, SiTailwindcss, SiTypescript } from "react-icons/si"
 import { HardSkill } from "./HardSkill"
 
 export const HardSkills = () => {
@@ -12,8 +12,9 @@ export const HardSkills = () => {
                 <HardSkill  icon={<SiTypescript/>} name="Typescript"/>
                 <HardSkill  icon={<SiFastify/>} name="Fastify"/>
                 <HardSkill  icon={<SiPostgresql/>} name="PostgreSQL"/>
-                <HardSkill  icon={<SiPhp/>} name="PHP"/>
-                <HardSkill  icon={<SiMysql/>} name="MySQL"/>
+                <HardSkill  icon={<SiGit/>} name="GIT"/>
+                <HardSkill  icon={<SiPhp/>} name="PHP 📝"/>
+                <HardSkill  icon={<SiMysql/>} name="MySQL 📝"/>
                 <HardSkill  icon={<SiReact/>} name="React"/>
                 <HardSkill  icon={<SiNextdotjs/>} name="Next"/>
                 <HardSkill  icon={<SiPython/>} name="Python"/>
