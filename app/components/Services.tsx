@@ -11,7 +11,7 @@ export const Services = () => {
         <section className="mt-60 flex flex-col justify-center items-center">
             <h2 className="mb-16 text-[2.5rem] font-semibold color_main">Serviços</h2>
             <div className="flex items-center justify-center gap-8 flex-wrap">
-                <Service title="Desenvolvimento de sites" description="Crio sites interativos e responsivos usando HTML, CSS e JavaScript, combinados com frameworks como React" icon={<CgWebsite size={48} color="#9CA9BD"/>}/>
+                <Service title="Desenvolvimento de sites" description="Crio sites interativos e responsivos usando HTML, CSS e JavaScript, combinados com frameworks como Next.js" icon={<CgWebsite size={48} color="#9CA9BD"/>}/>
                 <Service title="Desenvolvimento de Web API" description="Desenho e implemento APIs eficientes e escaláveis, garantindo a segurança e a integração perfeita com sistemas." icon={<TbApi size={48} color="#9CA9BD"/>}/>
                 <Service title="Desenvolvimento Mobile" 
                 description="Crio aplicações cross-platform de alta performance com React Native, utilizando componentes personalizados e integrações." icon={<HiDevicePhoneMobile  size={48} color="#9CA9BD"/>}/>
