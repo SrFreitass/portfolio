@@ -1,0 +1,54 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "./Layout.astro";
+
+---
+
+<Layout title="Blog - Freitasdev">
+    <main>
+        <p id="back" onclick="navigation.navigate('/blog')"><Icon name="mdi:arrow-left"/> Voltar</p>
+        <slot/>
+    </main>
+</Layout>
+
+<style is:global>
+    main {
+        padding: 1rem;
+    }
+
+    h1 {
+        padding: 0.5rem 0rem;
+    }
+    
+    h1, li::marker {
+		color: var(--white);
+	}
+
+    h2 {
+        font-family: 'Geist Mono', sans-serif;
+        color: var(--white);
+        padding: 1rem 0rem;
+    }
+
+
+    header h2 {
+        padding: 0;
+    }
+
+    header li {
+        margin: 0;
+    }
+
+    li {
+        margin-top: 0.5rem;
+        margin-left: 2.2rem;
+    }
+
+    #back {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        cursor: pointer;
+    }
+
+</style>
