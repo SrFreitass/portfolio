@@ -13,7 +13,7 @@ const { title, description, url, icon } = Astro.props;
 
 <div class="info-card">
     <div>
-        <Icon name={icon}/>
+        <Icon name={icon} color="#fff" size={22}/>
         <span>{title}</span>
     </div>
     <p><a href={url} target="_blank">{description}</a></p>
@@ -32,5 +32,18 @@ const { title, description, url, icon } = Astro.props;
 
     .info-card a {
         color: var(--color-secondary);
+    }
+
+    .info-card {
+        padding: 1rem;
+        border-radius: 10px;
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .info-card span {
+        color: var(--white);
     }
 </style>
