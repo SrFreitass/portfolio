@@ -1,0 +1,59 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../../layouts/Layout.astro";
+const allPosts = await Astro.glob('./posts/*.md');
+console.log(allPosts.forEach(post => console.log(post.url, post.frontmatter.title)));
+---
+
+<Layout title="Blog - Freitasdev">
+    <main>
+        <h2>Meu Blog</h2>
+        <p>Minhas postagens relacionadas a software, tecnologia, computação...</p>
+        {
+            allPosts.map((post) => {
+               return (
+                <a href={post.url}>
+                    <div class="post">
+                        <div class="post-text">
+                            <h2>{post.frontmatter.title}</h2>
+                            <span>{post.frontmatter.description}</span>
+                        </div>
+                        <Icon name="carbon:launch" color="#fff"/>
+                    </div>
+                </a>
+            )
+            })
+        }
+    </main>
+</Layout>
+
+<style>
+    main h2, main h3 {
+        color: var(--white);
+    }
+    
+    span {
+        color: var(--color-secondary);
+    }
+
+    p {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(84,84,84,.5);
+    }
+
+
+    .post {
+        margin-top: 1rem;
+        padding: 1.5rem 1rem;
+        border: 1px solid rgba(84,84,84,.5);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .post h2 {
+        margin: 0;
+    }
+</style>
