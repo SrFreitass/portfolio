@@ -1,0 +1,64 @@
+---
+import Info from "./Info.astro"
+---
+
+<section>
+    <img src="https://monkeybuzz.com.br/wp-content/uploads/2014/12/lana-del-rey(10).jpg"/>
+    <div>
+        <p>INTRODUÇÃO</p>
+        <h2>Freitas, desenvolvedor full-stack</h2>
+        <p id="description">Comecei a desenvolver no início de 2023. Sou um entusiasta da tecnologia e um desenvolvedor full-stack, dedicado a construir soluções e projetos de alto nível. Desde o início da minha jornada no desenvolvimento, tenho buscado aprimorar constantemente minhas habilidades e enfrentar novos desafios.    </p>
+        <div class="cards">
+            <Info title="Cidade" description="Campo Grande, MS" icon="carbon:location" url="#"/>
+            <Info title="OS" description="Archlinux" icon="carbon:screen" url="#"/>
+            <Info title="Github" description="/srfreitass" icon="carbon:logo-github" url="https://github.com/srfreitass"/>
+            <Info title="Linkedin" description="Guilherme F." icon="carbon:logo-linkedin" url="https://github.com/srfreitass"/>
+        </div>
+    </div>
+</section>
+
+<style>
+    section {
+        border: 1px solid rgba(84,84,84,0.5);
+        padding: 1.5rem;
+        border-radius: 10px;
+        display: flex;
+        gap: 2rem;
+    }
+
+    div p:first-child {
+        line-height: 0;
+    }
+
+    section img {
+        border-radius: 10px; 
+        width: 20rem;
+        height: 30rem;
+        object-fit: cover;
+    }
+
+    h2 {
+        padding: 0;
+        color: var(--white);
+        margin-block-end: 0;
+    }
+
+    p {
+        color: var(--color-secondary);
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+
+    p#description {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid rgba(84,84,84,0.5);
+    }
+
+    .cards {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+    }
+
+ 
+</style>

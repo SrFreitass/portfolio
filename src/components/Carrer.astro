@@ -1,0 +1,29 @@
+---
+import CarrerCard from "./CarrerCard.astro";
+---
+
+<section>
+    <p>CARREIRA</p>
+    <div>
+        <CarrerCard title="Técnico desenvolvimento de sistemas" icon="carbon:education" period="Mar. 2024 - Dez.\ 2025" institution="SENAC HUB ACADEMY"/>
+    </div>
+</section>
+
+<style>
+    section {
+        border: 1px solid rgba(84,84,84,0.5);
+        padding: 1.5rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        margin-top: 2rem;
+    }
+
+    p {
+        line-height: 0;
+        color: var(--color-secondary);
+    }
+
+</style>

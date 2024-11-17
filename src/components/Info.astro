@@ -1,0 +1,36 @@
+---
+export interface Props {
+    icon: string;
+    title: string;
+    description: string;
+    url: string;
+}
+
+import { Icon } from "astro-icon/components";
+const { title, description, url, icon } = Astro.props;
+---
+
+
+<div class="info-card">
+    <div>
+        <Icon name={icon}/>
+        <span>{title}</span>
+    </div>
+    <p><a href={url} target="_blank">{description}</a></p>
+</div>
+
+<style>
+    .info-card > div {
+        display: flex;
+        gap: 1rem;
+        align-items: center;
+    }
+
+    .info-card p {
+        line-height: 0;
+    }
+
+    .info-card a {
+        color: var(--color-secondary);
+    }
+</style>
