@@ -1,0 +1,45 @@
+---
+export interface Props {
+    title: string;
+    description: string;
+    imageUrl: string;
+    url: string;
+}
+
+const { title, description, imageUrl, url } = Astro.props;
+---
+
+<div class="project">
+    <img src={imageUrl}/>
+    <div>
+        <h2>{title}</h2>
+        <p>{description}</p>
+    </div>
+</div>
+
+<style>
+    div.project {
+        max-width: 20rem;
+        border: 1px solid rgba(84,84,84,.5);
+        border-radius: 10px;
+    }
+
+    div > img {
+        width: 100%;
+        border-radius: 10px;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+        color: var(--white);
+    }
+
+    p {
+        color: var(--color-secondary);
+        line-height: 1.5rem;
+    }
+
+    div > div {
+        padding: 1rem;
+    }
+</style>

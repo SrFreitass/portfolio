@@ -1,12 +1,10 @@
 ---
 import Carrer from '../components/Carrer.astro';
-import Header from '../components/Header.astro';
 import Presentation from '../components/Presentation.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
-<Layout title="Welcome to Astro.">
-	<Header/>
+<Layout title="Welcome to Astro." client:load>
 	<main>
 		<Presentation/>
 		<Carrer/>
@@ -17,7 +15,6 @@ import Layout from '../layouts/Layout.astro';
 	main {
 		margin: auto;
 		padding: 1rem;
-		max-width: calc(100% - 2rem);
 		color: var(--white);
 		font-size: 20px;
 		line-height: 1.6;
