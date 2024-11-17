@@ -1,0 +1,52 @@
+---
+import Stack from "./Stack.astro";
+
+---
+
+<section>
+    <h2>Stacks</h2>
+    <p>Minhas stacks de desenvolvimento.</p>
+    <div class="stacks">
+        <Stack stack="Typescript" icon="mdi:language-typescript"/>
+        <Stack stack="Javascript" icon="mdi:language-javascript"/>
+        <Stack stack="React.js" icon="mdi:react"/>
+        <Stack stack="Next.js" icon="mdi:react"/>
+        <Stack stack="Firebase" icon="mdi:firebase"/>
+        <Stack stack="Node.js" icon="mdi:nodejs"/>
+        <Stack stack="PostgreSQL" icon="carbon:database-postgresql"/>
+    </div>
+    <h2>Estudando</h2>
+    <p>Atualmente estudando essas tecnologias.</p>
+    <div class="stacks">
+        <Stack stack="PHP" icon="mdi:language-php"/>
+        <Stack stack="MySQL" icon="carbon:mysql"/>
+        <Stack stack="Docker" icon="mdi:docker"/>
+    </div>
+</section>
+
+<style>
+    section {
+        border: 1px solid rgba(84,84,84,0.5);
+        padding: 1.5rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        margin-top: 2rem;
+    }
+
+    p {
+        color: var(--color-secondary);
+    }
+
+    h2 {
+        color: var(--white);
+    }
+
+    .stacks {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+</style>

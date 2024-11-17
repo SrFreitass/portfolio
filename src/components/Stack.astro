@@ -1,0 +1,32 @@
+---
+import { Icon } from 'astro-icon/components';
+
+export interface Props {
+    stack: string;
+    icon: string;
+}
+
+const { stack, icon } = Astro.props;
+---
+
+
+<div class="stack">
+    <Icon name={icon} color="#fff" size={22}/>
+    <span>{stack}</span>
+</div>
+
+<style>
+    .stack {
+        display: flex;
+        gap: 1rem;
+        padding: 1rem;
+    }
+
+    .stack p {
+        line-height: 0;
+    }
+
+    .stack span {
+        color: var(--white);
+    }
+</style>
