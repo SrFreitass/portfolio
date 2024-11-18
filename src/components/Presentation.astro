@@ -5,9 +5,9 @@ import Info from "./Info.astro"
 <section>
     <img src="https://media.discordapp.net/attachments/1259655073932378195/1269884045421187102/IMG_4707.jpg?ex=673b73ed&is=673a226d&hm=02e14bd9bb4802dbd14ce5ddcc20ebe39ca2096d2aeeb1c78e4f3debd55d6622&=&format=webp&width=498&height=664"/>
     <div>
-        <p>INTRODUÇÃO</p>
+        <p class="topic">INTRODUÇÃO</p>
         <h2>Freitas, desenvolvedor full-stack</h2>
-        <p id="description">Comecei a desenvolver no início de 2023. Sou um entusiasta da tecnologia e um desenvolvedor full-stack, dedicado a construir soluções e projetos de alto nível. Desde o início da minha jornada no desenvolvimento, tenho buscado aprimorar constantemente minhas habilidades e enfrentar novos desafios.    </p>
+        <p id="description">Comecei minha jornada no desenvolvimento em 2023, impulsionado pela paixão por tecnologia. Sou um desenvolvedor full-stack comprometido em criar soluções de alto impacto e projetos de qualidade. Desde o início, tenho me dedicado a aprimorar continuamente minhas habilidades, explorar novas ferramentas e superar desafios que me permitem evoluir como profissional e contribuir para projetos de excelência.        </p>
         <div class="cards">
             <Info title="Cidade" description="Campo Grande, MS" icon="carbon:location" url="#"/>
             <Info title="OS" description="Archlinux" icon="carbon:screen" url="#"/>
@@ -45,7 +45,7 @@ import Info from "./Info.astro"
         color: var(--color-secondary);
         font-size: 1rem;
         padding: 1rem 0rem;
-        line-height: 1.8rem;
+        line-height: 2rem;
     }
 
     p#description {
@@ -72,5 +72,10 @@ import Info from "./Info.astro"
         }
     }
 
+    @media(max-width: 400px) {
+        section img {
+            max-height: 20rem;
+        }
+    }
  
 </style>

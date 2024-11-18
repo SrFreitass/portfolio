@@ -26,6 +26,9 @@ const { title } = Astro.props;
 		<Header/>
 		<span id="bg-focus"></span>
 		<slot />
+		<footer style="text-align: center; padding: 2rem 0rem;">
+			<p>Feito com ❤️ por Freitasdev</p>
+		</footer>
 	</body>
 </html>
 
@@ -76,6 +79,10 @@ const { title } = Astro.props;
 
 	a {
 		text-decoration: none;
+	}
+
+	.topic {
+		font-weight: 600;
 	}
 
 	svg {

@@ -8,28 +8,53 @@ import { Icon } from "astro-icon/components";
 
     <div id="name-and-email">
         <div>
-            <label id="name">Nome</label>
-            <input type="text" placeholder="Seu nome"/>
+            <label>Nome</label>
+            <input  id="name" type="text" placeholder="Seu nome"/>
         </div>
 
         <div>
-            <label id="name">E-mail</label>
-            <input type="text" placeholder="Seu nome"/>
+            <label>E-mail</label>
+            <input  id="mail" type="email" placeholder="Seu nome"/>
         </div>
     </div>
 
     <div>
-        <label id="message">Assunto</label>
-        <input placeholder="Qual o assunto?"></input>
+        <label>Assunto</label>
+        <input id="subject" placeholder="Qual o assunto?"></input>
     </div>
 
     <div>
-        <label id="message">Mensagem</label>
-        <textarea placeholder="Escreva sua mensagem"></textarea>
+        <label>Mensagem</label>
+        <textarea id="message" placeholder="Escreva sua mensagem"></textarea>
     </div>
 
     <button><Icon name="carbon:send-alt" size={16}/> Enviar mensagem</button>
 </form>
+
+<script>
+    const form = document.querySelector('form') as HTMLFormElement;
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const name = document.querySelector('#name') as HTMLInputElement;
+        const email = document.querySelector('#mail') as HTMLInputElement;
+        const subject = document.querySelector('#subject') as HTMLInputElement;
+        const message = document.querySelector('#message') as HTMLInputElement;
+        
+        console.log(name.value, email, message);
+
+        await fetch('https://discord.com/api/webhooks/1307922724890345583/9EvB7LYEs-h_ajjyyTMQsLsWgQeh2uC5ZSv7rhRBcCic0GskR-3NZyuQnqtHTqw_blSl', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({
+                content: `Nome: [${name.value}]\nEmail: [${email.value}]\nAssunto:[${subject.value}]\nMensagem: [${message.value}]`
+            })
+        });
+
+        alert('Mensagem enviada com sucesso!');
+    });
+</script>
 
 <style>
 
@@ -52,8 +77,9 @@ import { Icon } from "astro-icon/components";
 
     form input {
         width: 100%;
-        padding: 0.5rem;
+        padding: 0.6rem;
         border-radius: 5px;
+        font-size: 1rem;
         background: none;
         border: var(--border-main);
         color: var(--white);
@@ -61,7 +87,8 @@ import { Icon } from "astro-icon/components";
 
     form textarea {
         width: 100%;
-        padding: 0.5rem;
+        padding: 0.6rem;
+        font-size: 1rem;
         border-radius: 5px;
         background: none;
         border: var(--border-main);
