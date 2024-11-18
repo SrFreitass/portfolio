@@ -1,0 +1,70 @@
+---
+import { Icon } from "astro-icon/components";
+import Layout from "../../layouts/Layout.astro";
+const allPosts = await Astro.glob('./posts/*.md');
+console.log(allPosts.forEach(post => console.log(post.url, post.frontmatter.title)));
+---
+
+<Layout title="Blog - Freitasdev">
+    <main class="animation-show">
+        <h2>Meu Blog</h2>
+        <p>Minhas postagens relacionadas a software, tecnologia, computação...</p>
+        {
+            allPosts.map((post) => {
+               return (
+                <a href={post.url}>
+                    <div class="post">
+                        <div class="post-text">
+                            <h2>{post.frontmatter.title}</h2>
+                            <span>{post.frontmatter.description}</span>
+                        </div>
+                        <Icon name="carbon:launch" color="#fff"/>
+                    </div>
+                </a>
+            )
+            })
+        }
+    </main>
+</Layout>
+
+<style>
+    main {
+        padding: 1rem 0rem;
+    }
+
+    main h2, main h3 {
+        color: var(--white);
+    }
+    
+    span {
+        color: var(--color-secondary);
+    }
+
+    p {
+        padding-bottom: 1rem;
+        border-bottom: var(--border-main);
+    }
+
+
+    .post {
+        margin-top: 1rem;
+        padding: 1.5rem 1rem;
+        border: var(--border-main);
+        border-radius: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .post h2 {
+        margin: 0;
+    }
+
+    @media (max-width: 650px) {
+        .post {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+    }
+</style>
