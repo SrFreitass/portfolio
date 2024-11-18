@@ -25,7 +25,7 @@ import Info from "./Info.astro"
         display: flex;
         gap: 2rem;
     }
-
+    
     div p:first-child {
         line-height: 0;
     }
@@ -60,6 +60,16 @@ import Info from "./Info.astro"
         display: flex;
         flex-wrap: wrap;
         gap: 2rem;
+    }
+
+    @media (max-width: 950px) {
+        section {
+            flex-direction: column;
+        }
+
+        section img {
+            width: auto;
+        }
     }
 
  

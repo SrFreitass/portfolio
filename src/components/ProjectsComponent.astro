@@ -51,9 +51,21 @@ import Project from "./Project.astro";
     }
 
     section div {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 2rem;
         margin-top: 1rem;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 2rem;   
+    }
+
+    @media (max-width: 950px) {
+        section div {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
+        }
+    }
+
+    @media (max-width: 650px) {
+        section div {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
     }
 </style>

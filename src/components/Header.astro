@@ -1,10 +1,10 @@
 ---
-import { navigate } from "astro:transitions/client"
+import { Icon } from "astro-icon/components"
 ---
 
 <header>
     <div id="logo">
-        <h2>FREITASDEV</h2>
+        <h2>🧑‍🚀 FREITASDEV</h2>
     </div>
     <nav>
         <ul>
@@ -15,7 +15,23 @@ import { navigate } from "astro:transitions/client"
             <li><a href="/projects">Projetos</a></li>
             <li><a href="/blog">Blog</a></li>
             <li><a href="/contact">Contato</a></li>
-        </ul>        
+        </ul> 
+        <ul id="mobile-menu">
+            <Icon name="carbon:menu" size={32} id="mobile-menu-open" />
+            <div class="mobile-menu-nav animation-menu">
+                <div>
+                    <h3>MENU</h3>
+                    <Icon name="carbon:close" size={32} />
+                </div>
+                <div id="theme-control">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path fill-rule="evenodd" clip-rule="evenodd" d="M12.0972 2.53039C12.2913 2.8649 12.2752 3.28136 12.0557 3.5998C11.3898 4.56594 11 5.73595 11 7.00002C11 10.3137 13.6863 13 17 13C18.2641 13 19.4341 12.6102 20.4002 11.9443C20.7187 11.7249 21.1351 11.7087 21.4696 11.9028C21.8041 12.0969 21.9967 12.4665 21.9642 12.8519C21.5313 17.9765 17.236 22 12 22C6.47715 22 2 17.5229 2 12C2 6.76398 6.02351 2.46874 11.1481 2.03585C11.5335 2.0033 11.9031 2.19588 12.0972 2.53039ZM9.42424 4.42352C6.26994 5.49553 4 8.48306 4 12C4 16.4183 7.58172 20 12 20C15.517 20 18.5045 17.7301 19.5765 14.5758C18.7676 14.8508 17.9008 15 17 15C12.5817 15 9 11.4183 9 7.00002C9 6.09922 9.1492 5.2324 9.42424 4.42352Z" fill="#b1b1b1"></path> </g></svg>
+                </div>
+                <li><a href="/">Sobre</a></li>
+                <li><a href="/projects">Projetos</a></li>
+                <li><a href="/blog">Blog</a></li>
+                <li><a href="/contact">Contato</a></li>
+            </div>
+        </ul>       
     </nav>
 </header>
 
@@ -26,9 +42,51 @@ import { navigate } from "astro:transitions/client"
         document.documentElement.classList.toggle('light');
    });
 
+    const mobileMenu = document.querySelector('#mobile-menu-open');
+    const closeMenu = document.querySelector('.mobile-menu-nav div svg');
+    const bgFocus = document.querySelector('#bg-focus') as HTMLDivElement;
+
+    const toggleMenu = () => {
+        const mobileMenuNav = document.querySelector('.mobile-menu-nav') as HTMLDivElement;
+        if(mobileMenuNav.classList.toggle('show')) {
+            document.documentElement.style.overflow = 'hidden';
+            bgFocus.classList.add('focus');
+            mobileMenuNav.classList.remove('animation-close-menu');
+            return;
+        }
+
+        mobileMenuNav.classList.add('animation-close-menu');
+        bgFocus.classList.remove('focus');
+        document.documentElement.style.overflow = 'auto';
+    };
+
+    mobileMenu?.addEventListener('click', toggleMenu); 
+    closeMenu?.addEventListener('click', toggleMenu);
+
+
 </script>
 
 <style>
+    @keyframes open-menu {
+        from {
+            transform: translateX(-100%);
+        }
+        to {
+            transform: translateX(0%);
+        }
+    }
+
+    @keyframes close-menu {
+        from {
+            transform: translateX(0%);
+        }
+        to {
+            transform: translateX(-100%);
+        }
+        
+    }
+
+
     header {
         display: flex;
         justify-content: space-between;
@@ -60,5 +118,71 @@ import { navigate } from "astro:transitions/client"
 
     svg {
         width: 20px;
+    }
+
+    #mobile-menu {
+        display: none;
+    }
+
+    @media (max-width: 768px) {
+        header ul {
+            display: none;
+        }
+
+        #mobile-menu {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .mobile-menu-nav {
+            z-index: 999;
+            border-right: rgba(84, 84, 84, 0.5) 1px solid;
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            background: var(--bg);
+            width: 100%;
+            max-width: 20rem;
+            height: 150vh;
+            padding: 1rem;
+            border-radius: 10px;
+        }
+
+        .show {
+            display: block;
+        }
+
+        .mobile-menu-nav li {
+            list-style: none;
+            padding: 0.5rem 0rem;
+        }
+
+        .mobile-menu-nav div {
+            margin-top: 4rem;
+        }
+
+        .mobile-menu-nav > div {
+            margin-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .mobile-menu-nav div h3 {
+            color: var(--white);
+        }
+
+
+        .animation-menu {
+            animation: open-menu 0.5s ease-in-out;
+        }
+
+        .animation-close-menu {
+            animation: close-menu 0.5s ease-in-out;
+            animation-fill-mode: forwards;
+            display: block;
+        }
+
     }
 </style>
