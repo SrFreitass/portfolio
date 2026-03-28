@@ -1,0 +1,54 @@
+---
+import CareerCard from "./CareerCard.astro";
+---
+
+<section>
+    <p class="topic">CARREIRA</p>
+    <div>
+        <CareerCard
+            title="Desenvolvedor Front-end"
+            icon="mdi:briefcase-outline"
+            period="Dez. 2025 - Presente"
+            institution="Squadra Digital"
+            institutionLink="https://squadra.com.br"
+            description="Atuação alocada em múltiplos clientes, participando de rotinas ágeis e desenvolvendo soluções escaláveis utilizando React."
+        />
+
+        <CareerCard
+            title="Desenvolvedor Full-Stack"
+            icon="mdi:briefcase-outline"
+            period="Ago. 2025 - Dez. 2025"
+            institution="Baikal Security"
+            institutionLink="https://baikalsec.com"
+            description="Manutenção e desenvolvimento de novas funcionalidades para o software CyberTracker (solução de Gestão da Superfície de Ataque (Attack Surface Management), utilizando ferramentas como, Ruby, Ruby On Rails e React.js"
+        />
+        <CareerCard
+            title="Desenvolvedor Mobile"
+            icon="mdi:briefcase-outline"
+            period="Dez. 2024 - Jun. 2025"
+            institution="Gerente Boviplan"
+            institutionLink="https://www.gerbov.com.br/"
+            description="Manutenção e desenvolvimento de funcionalidades do App Gerbov (Software ERP para propriedade rural) desenvolvido em Kotlin, utilizando ferramentas como, Android SDK, Room Database, MVVM."
+        />
+        <br/>
+        <CareerCard title="Desenvolvimento de sistemas" icon="carbon:education" period="Mar. 2024 - Jan.\ 2026" institution="Senac Hub Academy" institutionLink="https://ms.senac.br" description="Desenvolver algoritmos, Analisar programação estruturada e orientada a objetos, Analisar requisitos e funcionalidades da aplicação, Projeto Integrador Desenvolvedor de aplicações"/>
+    </div>
+</section>
+
+<style>
+    section {
+        border: 1px solid rgba(84,84,84,0.5);
+        padding: 1.5rem;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+
+        margin-top: 2rem;
+    }
+
+    p {
+        color: var(--color-secondary);
+    }
+
+</style>
